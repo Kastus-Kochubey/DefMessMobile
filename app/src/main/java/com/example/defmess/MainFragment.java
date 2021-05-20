@@ -1,5 +1,6 @@
 package com.example.defmess;
 
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,26 +42,32 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Button button = view.findViewById(R.id.button);
-        TextView textView = view.findViewById(R.id.textView);
+        ScrollView scrollView = view.findViewById(R.id.ScrollView);
+        LinearLayout linearLayout = view.findViewById(R.id.LinearLayout);
+        ImageButton imageButton = view.findViewById(R.id.imageButton);
+
+
         button.setOnClickListener((v) -> {
 //            RequestToServer request = new RequestToServer("https://82.148.29.139");
             RequestToServer request = new RequestToServer("http://127.0.0.1:5000");
             try {
                 JSONObject jsonObject = new JSONObject();
-                jsonObject.put("email","russian_post");
-                jsonObject.put("password","1234");
+                jsonObject.put("email", "russian_post");
+                jsonObject.put("password", "1234");
 //                String text = request.post("/user/login", "{'email': 'russian_post','password': '1234'}");
                 String text = request.post("/user/login", jsonObject.toString());
-                textView.setText(text);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
+                for (int i = 0; i < 20; i++) {
+                    TextView textView = new TextView(view.getContext());
+                    textView.setTextColor(Color.rgb(255, 100, 150));
+                    textView.setText(text);
+                    linearLayout.addView(textView);
+                }
+            } catch (IOException | ExecutionException | InterruptedException | JSONException e) {
                 e.printStackTrace();
             }
+
+        });
+        imageButton.setOnClickListener((v) -> {
 
         });
     }
