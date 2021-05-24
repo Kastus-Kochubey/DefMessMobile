@@ -1,50 +1,43 @@
 package com.example.defmess;
 
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+
+import com.example.defmess.databinding.ActivityMainBinding;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
 public class MainFragment extends Fragment {
-
-
     public MainFragment() {
-        super(R.layout.main_fragment);
+        super(R.layout.fragment_main);
     }
-
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         Button button = view.findViewById(R.id.button);
+//        Button button = view.
+//        ScrollView scrollView = view.findViewById(R.id.ScrollView);
         ScrollView scrollView = view.findViewById(R.id.ScrollView);
+
         LinearLayout linearLayout = view.findViewById(R.id.LinearLayout);
-        ImageButton imageButton = view.findViewById(R.id.imageButton);
+//        ImageButton imageButton = view.findViewById(R.id.imageButton);
 
 
         button.setOnClickListener((v) -> {
@@ -58,7 +51,7 @@ public class MainFragment extends Fragment {
                 String text = request.post("/user/login", jsonObject.toString());
                 for (int i = 0; i < 20; i++) {
                     TextView textView = new TextView(view.getContext());
-                    textView.setTextColor(Color.rgb(255, 100, 150));
+                    textView.setTextColor(Color.rgb(255, 13 * i % 256, 150));
                     textView.setText(text);
                     linearLayout.addView(textView);
                 }
@@ -67,9 +60,9 @@ public class MainFragment extends Fragment {
             }
 
         });
-        imageButton.setOnClickListener((v) -> {
-
-        });
+//        imageButton.setOnClickListener((v) -> {
+//
+//        });
     }
 }
 

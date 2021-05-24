@@ -23,7 +23,7 @@ public class RequestToServer {
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
 
-    protected String post(String path, String json) throws IOException, ExecutionException, InterruptedException {
+    public String post(String path, String json) throws IOException, ExecutionException, InterruptedException {
         RequestBody body = RequestBody.create(json, JSON);
         Log.e("post", "json: " + body.toString() + " url: " + address + path);
         Request request = new Request.Builder()
@@ -38,7 +38,7 @@ public class RequestToServer {
     }
 
 
-    class MakeReq extends AsyncTask<Request, Void, String> {
+    protected class MakeReq extends AsyncTask<Request, Void, String> {
         @Override
         protected String doInBackground(Request... requests) {
             try (Response response = client.newCall(requests[0]).execute()) {
