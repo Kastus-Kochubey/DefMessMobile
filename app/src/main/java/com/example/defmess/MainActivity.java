@@ -25,15 +25,16 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
 
-//    public MainActivity() {
-//        super(R.layout.activity_main);
-//    }
+    public MainActivity() {
+        super(R.layout.activity_main);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+//        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.bind(findViewById(R.id.drawer_layout));
 
 
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 }

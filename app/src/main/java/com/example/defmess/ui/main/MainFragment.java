@@ -11,12 +11,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.defmess.R;
 import com.example.defmess.RequestToServer;
 import com.example.defmess.databinding.FragmentMainBinding;
 
@@ -62,7 +58,7 @@ public class MainFragment extends Fragment {
                 String text = request.post("/user/login", jsonObject.toString());
                 for (int i = 0; i < 20; i++) {
                     TextView textView = new TextView(root.getContext());
-                    textView.setTextColor(Color.rgb(255, 13 * i % 256, 150));
+                    textView.setTextColor(Color.rgb(255, 3 * i % 200, 7 * i % 256));
                     textView.setText(text);
                     linearLayout.addView(textView);
                 }

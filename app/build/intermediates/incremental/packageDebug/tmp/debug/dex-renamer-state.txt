@@ -1,7 +1,7 @@
-#Mon May 24 20:38:03 YEKT 2021
-base.0=C\:\\Users\\mobile\\AndroidStudioProjects\\DefMessMobile\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+#Mon May 24 23:08:47 YEKT 2021
+base.1=C\:\\Users\\itnet\\YandexDisk\\Android\\Projects\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
 path.1=classes.dex
+base.0=C\:\\Users\\itnet\\YandexDisk\\Android\\Projects\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.1=classes2.dex
-path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\mobile\\AndroidStudioProjects\\DefMessMobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+path.0=classes.dex

@@ -15,7 +15,7 @@ com/example/defmess/ui/main/MainViewModel.java
  com.example.defmess.ui.main.MainViewModel
 com/example/defmess/databinding/AppBarMainBinding.java
  com.example.defmess.databinding.AppBarMainBinding
-com/example/defmess/ui/main/MainFragment.java
- com.example.defmess.ui.main.MainFragment
 com/example/defmess/MainActivity.java
  com.example.defmess.MainActivity
+com/example/defmess/ui/main/MainFragment.java
+ com.example.defmess.ui.main.MainFragment
