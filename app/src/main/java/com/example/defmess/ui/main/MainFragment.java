@@ -27,14 +27,21 @@ import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 public class MainFragment extends Fragment {
+    //    private MainViewModel mainViewModel;
 
-//    private MainViewModel mainViewModel;
+//    public MainFragment (){
+//        super(R.layout.fragment_main);
+//    }
+
+
     private FragmentMainBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
 //        mainViewModel =
 //                new ViewModelProvider(this).get(MainViewModel.class);
+
 
         binding = FragmentMainBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -65,16 +72,7 @@ public class MainFragment extends Fragment {
 
         });
 
-//        final LinearLayout linearLayout = binding.LinearLayout;
-//        mainViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
         return root;
-
-
 
 
     }
@@ -84,4 +82,5 @@ public class MainFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }

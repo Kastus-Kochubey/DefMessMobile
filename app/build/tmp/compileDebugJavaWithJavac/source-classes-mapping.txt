@@ -1,0 +1,21 @@
+com/example/defmess/databinding/FragmentMainBinding.java
+ com.example.defmess.databinding.FragmentMainBinding
+com/example/defmess/databinding/ContentMainBinding.java
+ com.example.defmess.databinding.ContentMainBinding
+com/example/defmess/databinding/ActivityMainBinding.java
+ com.example.defmess.databinding.ActivityMainBinding
+com/example/defmess/ExampleFragment.java
+ com.example.defmess.ExampleFragment
+com/example/defmess/BuildConfig.java
+ com.example.defmess.BuildConfig
+com/example/defmess/RequestToServer.java
+ com.example.defmess.RequestToServer
+ com.example.defmess.RequestToServer$MakeReq
+com/example/defmess/ui/main/MainViewModel.java
+ com.example.defmess.ui.main.MainViewModel
+com/example/defmess/databinding/AppBarMainBinding.java
+ com.example.defmess.databinding.AppBarMainBinding
+com/example/defmess/ui/main/MainFragment.java
+ com.example.defmess.ui.main.MainFragment
+com/example/defmess/MainActivity.java
+ com.example.defmess.MainActivity
